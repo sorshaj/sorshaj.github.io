@@ -1,6 +1,6 @@
-import * as d3 from "./d3.v7.js" 
+import * as d3 from "./d3.v7.min.js" 
 
-console.log(d3);
+console.log(d3.scaleUtc);
 
 // Declare the chart dimensions and margins.
 const width = 640;
