@@ -33,6 +33,16 @@ svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
     .call(d3.axisLeft(y));
 
+svg.append("polygon")
+    .attr("points", `
+        ${xScale(3)},${yScale(7)}
+        ${xScale(6)},${yScale(2)}
+        ${xScale(1)},${yScale(2)}
+    `)
+    .attr("fill", "blue")
+    .attr("stroke", "black")
+    .attr("stroke-width", 2);
+
 // Append the SVG element.
 
 const container = document.getElementById("hello");
