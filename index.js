@@ -1,5 +1,7 @@
 import * as d3 from "./d3.v7.js" 
 
+console.log(d3);
+
 // Declare the chart dimensions and margins.
 const width = 640;
 const height = 400;
