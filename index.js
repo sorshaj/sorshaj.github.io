@@ -1,5 +1,15 @@
 console.log(d3.scaleUtc);
 
+
+async function create_chart() {
+    console.log("Trying");
+    const data = await d3.csv("./kite.csv");
+    console.log(data);
+}
+
+create_chart();
+
+
 // Declare the chart dimensions and margins.
 const width = 640;
 const height = 400;
