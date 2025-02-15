@@ -31,8 +31,23 @@ svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
     .call(d3.axisLeft(y));
 
+
+const xScale = d3.scaleLinear().domain([0, 100]).range([marginLeft, width-marginRight]);
+const yScale = d3.scaleLinear().domain([0, 100]).range([height-marginBottom, marginTop]);
+svg.append("polygon")
+    .attr("points", `
+        ${xScale(40)},${yScale(40)}
+        ${xScale(40)},${yScale(50)}
+        ${xScale(50)},${yScale(50)}
+        ${xScale(50)},${yScale(40)}
+    `)
+    .attr("fill", "blue")
+    .attr("stroke", "black")
+    .attr("stroke-width", 2);
+
 const container = document.getElementById("hello");
 container.append(svg.node());
+    
 
 /*
 const xScale = d3.scaleLinear().domain([0, 10]).range([50, 450]);
