@@ -8,12 +8,10 @@ const marginRight = 20;
 const marginBottom = 30;
 const marginLeft = 40;
 
-// Declare the x (horizontal position) scale.
-const x = d3.scaleUtc()
-    .domain([new Date("2023-01-01"), new Date("2024-01-01")])
-    .range([marginLeft, width - marginRight]);
+const x = d3.scaleLinear()
+    .domain([0, 100])
+    .range([marginLeft, width-marginRight]);
 
-// Declare the y (vertical position) scale.
 const y = d3.scaleLinear()
     .domain([0, 100])
     .range([height - marginBottom, marginTop]);
@@ -33,6 +31,10 @@ svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
     .call(d3.axisLeft(y));
 
+const container = document.getElementById("hello");
+container.append(svg.node());
+
+/*
 const xScale = d3.scaleLinear().domain([0, 10]).range([50, 450]);
 const yScale = d3.scaleLinear().domain([0, 10]).range([250, 50]);
 
@@ -47,6 +49,5 @@ svg.append("polygon")
     .attr("stroke-width", 2);
 
 // Append the SVG element.
+*/
 
-const container = document.getElementById("hello");
-container.append(svg.node());
