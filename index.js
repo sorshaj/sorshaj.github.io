@@ -1,5 +1,3 @@
-//import * as d3 from "./d3.v7.min.js" 
-
 console.log(d3.scaleUtc);
 
 // Declare the chart dimensions and margins.
@@ -36,4 +34,6 @@ svg.append("g")
     .call(d3.axisLeft(y));
 
 // Append the SVG element.
+
+const container = d3.select("body");  // Now "container" is the <body>
 container.append(svg.node());
