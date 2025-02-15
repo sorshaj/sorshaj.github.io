@@ -1,4 +1,4 @@
-import * as d3 from "./d3.v7.min.js" 
+//import * as d3 from "./d3.v7.min.js" 
 
 console.log(d3.scaleUtc);
 
