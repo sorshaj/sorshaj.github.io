@@ -33,6 +33,9 @@ svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
     .call(d3.axisLeft(y));
 
+const xScale = d3.scaleLinear().domain([0, 10]).range([50, 450]);
+const yScale = d3.scaleLinear().domain([0, 10]).range([250, 50]);
+
 svg.append("polygon")
     .attr("points", `
         ${xScale(3)},${yScale(7)}
