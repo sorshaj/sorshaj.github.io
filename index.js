@@ -4,10 +4,10 @@ console.log(d3.scaleUtc);
 async function create_chart() {
     console.log("Trying");
     const data = await d3.csv("./kite.csv");
-    
+
     console.log(data);
 
-    var x_column_name = data[1][0];
+    var x_column_name = data.columns[0];
     console.log(x_column_name);
 
     var highest_x_value = 0;
